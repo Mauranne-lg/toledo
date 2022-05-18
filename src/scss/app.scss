@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+@layer base {
+  html {
+    font-family: PTSans, system-ui, sans-serif;
+  }
+}
+
+/* LAYOUT */
+
+#app {
+  min-height: 100vh;
+  width: 100vw;
+}
+
+section {
+  min-height: 80vh;
+}
+
+footer {
+  height: 20vh;
+}
+
+/* TITLES */
+
+h1 {
+  @apply text-5xl font-bold uppercase text-white font-serif;
+}
+
+h2 {
+  @apply text-4xl text-main-green uppercase font-bold  font-serif;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  @apply text-main-green italic grid place-content-center;
+}
+
+.underlined-title {
+  @apply text-light-grey mb-6;
+  position: relative;
+  &:after {
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: 0;
+    height: 3px;
+    width: 30px;
+    background: #a1bf43;
+  }
+}
+
+p {
+  @apply text-light-grey;
+  margin: 0 0 10px;
+  text-align: justify;
+}
