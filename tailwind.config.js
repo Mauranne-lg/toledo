@@ -1,3 +1,5 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   content: [
     "./index.html",
@@ -22,8 +24,9 @@ module.exports = {
     extend: {
       backgroundImage: theme => ({
         'toledo': "url('/src/assets/toledo-bird.jpg')",
-        'mission': "url('/src/assets/sprout.jpg')",
+        'mission-inicio': "url('/src/assets/sprout.jpg')",
         'history': "url('/src/assets/history.jpg')",
+        'mission-toledo':"url('/src/assets/mission-toledo2.jpg')",
         }),
       height: {
         'jumbotron': '20rem',
