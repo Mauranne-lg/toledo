@@ -25,7 +25,7 @@
                     Desde galería
                 </h3>
                 <div
-                    class="grid grid-cols-3 grid-rows-2 gap-2 gap-y-6 place-content-start"
+                    class="grid grid-cols-2 grid-rows-3 sm:grid-cols-3 sm:grid-rows-2 gap-2 gap-y-6 place-content-start"
                 >
                     <img
                         class="shadow border border-solid border-light-grey border-1"
@@ -75,7 +75,7 @@
                         </router-link>
                     </li>
                     <li class="hover:text-main-green">
-                        <router-link :to="{ name: 'reserva' }"
+                        <router-link :to="{ name: 'proyectos' }"
                             >Proyectos
                         </router-link>
                     </li>
@@ -85,7 +85,7 @@
                         </router-link>
                     </li>
                     <li class="hover:text-main-green">
-                        <router-link :to="{ name: 'reserva' }"
+                        <router-link :to="{ name: 'contacto' }"
                             >Contacto
                         </router-link>
                     </li>

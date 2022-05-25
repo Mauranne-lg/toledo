@@ -1,14 +1,11 @@
+<script setup>
+import Header from "../components/Header.vue";
+</script>
+
 <template>
     <section class="inicio">
-        <div class="w-screen">
-            <div
-                class="h-jumbotron bg-toledo bg-cover bg-center grid place-content-center"
-            >
-                <h1>Inicio</h1>
-                <span class="subtitle">Toledo - Inicio</span>
-            </div>
-        </div>
-        <div class="container w-screen flex flex-col sm:flex-row m-auto">
+        <Header title="Inicio" subtitle="Inicio" />
+        <div class="container w-4/5 flex flex-col sm:flex-row m-auto">
             <div class="m-10">
                 <h2>RESERVA EL TOLEDO</h2>
                 <p>
@@ -139,6 +136,7 @@
 <script>
 export default {
     name: "Inicio",
+    components: Header,
 };
 </script>
 

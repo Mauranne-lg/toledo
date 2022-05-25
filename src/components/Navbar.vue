@@ -1,26 +1,35 @@
+<script setup>
+import NavbarLink from "../components/NavbarLink.vue";
+</script>
+
 <template>
     <div class="bg-main-blue w-screen">
-        <ul class="flex items-center text-white text-sm h-12">
+        <ul class="flex items-center text-white text-sm h-12 lg:ml-6">
             <li class="px-3">
-                <i class="fa-solid mr-2 fa-phone --fa-white"></i>+506 8347-5194
+                <i class="fa-solid mr-2 fa-phone --fa-white"></i>
+                <a href="tel:+506 8347-5194" class="text-white"
+                    >+506 8347-5194</a
+                >
             </li>
             <li class="px-3">
-                <i class="fa-solid mr-2 fa-envelope --fa-white"></i
-                >info@reservaeltoledo.com
+                <i class="fa-solid mr-2 fa-envelope --fa-white"></i>
+                <a href="mailto:info@reservaeltoledo.com" class="text-white"
+                    >info@reservaeltoledo.com</a
+                >
             </li>
         </ul>
     </div>
     <nav
-        class="w-screen min-h-2 sm:h-28 flex items-center justify-between bg-white flex-wrap sm:px-6 p-2 sm:py-0"
+        class="w-screen min-h-2 lg:h-20 flex items-center justify-between bg-white flex-wrap lg:px-6 p-2 lg:py-0"
         role="navigation"
         aria-label="main navigation"
     >
         <div
-            class="w-full flex justify-between items-center sm:w-auto text-main-green"
+            class="w-full flex justify-between items-center lg:w-auto text-main-green"
         >
-            <img class="w-24" src="../assets/logo.jpg" alt="" />
+            <img class="w-24" src="../assets/logo-no-bg.png" id="logo" alt="" />
             <div
-                class="space-y-1 border h-8 border-main-green rounded p-2 m-2 sm:hidden"
+                class="space-y-1 border h-8 border-main-green rounded p-2 m-2 lg:hidden"
                 role="button"
                 aria-label="menu"
                 aria-expanded="false"
@@ -36,58 +45,17 @@
         <div
             id="navbar"
             :class="isNavbarOpen ? '' : 'hidden'"
-            class="h-full w-full block sm:flex sm:items-center sm:w-auto pl-3 sm:pl-0"
+            class="h-full w-full block lg:flex lg:items-center lg:w-auto pl-3 lg:pl-0"
         >
-            <div class="text-sm sm:flex-grow sm:py-6">
-                <router-link
-                    :to="{ name: 'inicio' }"
-                    class="block mt-4 sm:inline-block sm:mt-0 text-light-grey hover:text-main-green active:text-main-green mr-4"
-                >
-                    Inicio
-                </router-link>
-                <router-link
-                    :to="{ name: 'reserva' }"
-                    class="block mt-4 sm:inline-block sm:mt-0 text-light-grey hover:text-main-green active:text-main-green mr-4"
-                >
-                    Reserva El Toledo
-                </router-link>
-                <router-link
-                    :to="{ name: 'inicio' }"
-                    class="block mt-4 sm:inline-block sm:mt-0 text-light-grey hover:text-main-green active:text-main-green mr-4"
-                >
-                    Noticias
-                </router-link>
-                <router-link
-                    :to="{ name: 'inicio' }"
-                    class="block mt-4 sm:inline-block sm:mt-0 text-light-grey hover:text-main-green active:text-main-green mr-4"
-                >
-                    Proyectos
-                </router-link>
-                <router-link
-                    :to="{ name: 'inicio' }"
-                    class="block mt-4 sm:inline-block sm:mt-0 text-light-grey hover:text-main-green active:text-main-green mr-4"
-                >
-                    Especies
-                </router-link>
-                <router-link
-                    :to="{ name: 'inicio' }"
-                    class="block mt-4 sm:inline-block sm:mt-0 text-light-grey hover:text-main-green active:text-main-green mr-4"
-                >
-                    Galeria
-                </router-link>
-                <router-link
-                    :to="{ name: 'inicio' }"
-                    class="block mt-4 sm:inline-block sm:mt-0 text-light-grey hover:text-main-green active:text-main-green mr-4"
-                >
-                    Contacto
-                </router-link>
+            <div class="text-sm lg:flex-grow">
+                <NavbarLink v-for="navlink in navlinks" :route="navlink" />
             </div>
             <div
-                class="h-full mt-4 w-24 sm:w-normal sm:mt-0 bg-main-green flex place-items-center"
+                class="h-full mt-4 w-24 lg:w-normal lg:mt-0 bg-main-green flex place-items-center"
             >
                 <router-link
-                    :to="{ name: 'inicio' }"
-                    class="text-sm px-4 sm:h-20 flex place-items-center py-2 text-white"
+                    to="/reserva#reservar"
+                    class="text-sm px-4 lg:h-20 flex place-items-center py-2 text-white"
                 >
                     Reservar
                 </router-link>
@@ -99,12 +67,12 @@
 <script>
 export default {
     name: "Navbar",
+    components: "NavbarLink",
     data() {
         return {
             isNavbarOpen: false,
+            navlinks: ['inicio', 'reserva', 'noticias', 'proyectos', 'galeria', 'contacto']
         };
     },
 };
 </script>
-
-<style></style>

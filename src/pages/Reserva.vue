@@ -1,25 +1,22 @@
+<script setup>
+import Header from "../components/Header.vue";
+</script>
+
 <template>
     <section class="reserva">
-        <div class="w-screen">
-            <div
-                class="h-jumbotron bg-toledo bg-cover bg-center grid place-content-center w-full"
-            >
-                <h1 class="text-center">Reserva El Toledo</h1>
-                <span class="subtitle">Toledo - La reserva</span>
-            </div>
-            <div class="w-4/5 m-auto p-6 py-12">
-                <p>
-                    Este Centro Biológico comenzó a operar en el 2012. Su
-                    objetivo principal es mejorar la conservación y restauración
-                    de los ecosistemas de Refugio Nacional de Vida Silvestre
-                    Hacienda Barú y áreas aledañas. Se busca promover la
-                    ampliación de conocimientos científicos sobre la vida
-                    silvestre y el entorno social con una visión a largo plazo
-                    mientras que proporciona no sólo facilidades de hospedaje
-                    sino también otras valiosas experiencias tanto a
-                    investigadores como estudiantes de materias afines.
-                </p>
-            </div>
+        <Header title="Reserva" subtitle="Reserva" />
+        <div class="w-4/5 m-auto p-6 py-12">
+            <p>
+                Este Centro Biológico comenzó a operar en el 2012. Su
+                objetivo principal es mejorar la conservación y restauración
+                de los ecosistemas de Refugio Nacional de Vida Silvestre
+                Hacienda Barú y áreas aledañas. Se busca promover la
+                ampliación de conocimientos científicos sobre la vida
+                silvestre y el entorno social con una visión a largo plazo
+                mientras que proporciona no sólo facilidades de hospedaje
+                sino también otras valiosas experiencias tanto a
+                investigadores como estudiantes de materias afines.
+            </p>
         </div>
         <div class="w-screen">
             <div
@@ -55,7 +52,7 @@
             <div
                 class="h-fit sm:px-24 py-16 bg-gradient-to-b from-main-green to-main-blue opacity-75 flex flex-col justify-center items-center"
             >
-                <h3 class="text-5xl font-serif text-white mb-6">Reservar</h3>
+                <h3 id="reservar" class="text-5xl font-serif text-white mb-6">Reservar</h3>
                 <form>
                     <div class="flex flex-col sm:flex-row gap-3">
                         <label class="block">
@@ -96,7 +93,7 @@
                     </label>
                     <div class="w-full flex justify-center mt-4">
                         <button
-                            class="sm:w-1/3 w-full mx-auto black-pill-button"
+                            class="sm:w-1/3 w-full mx-auto transparent-pill-button"
                         >
                             Enviar sollicitud
                         </button>
@@ -236,10 +233,17 @@
 <script>
 export default {
     name: "Reserva",
+    components: Header,
     data() {
         return {
             cards: [1, 2, 3, 4, 5, 6, 7, 8],
+            hash: this.$route.hash,
         };
+    },
+    mounted() {
+        var section=this.$router.currentRoute.value.hash.replace("#", "");
+        if (section)
+            this.$nextTick(()=> window.document.getElementById(section).scrollIntoView());
     },
 };
 </script>

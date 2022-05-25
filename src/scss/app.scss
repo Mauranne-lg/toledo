@@ -11,6 +11,7 @@
 @layer base {
     html {
         font-family: PTSans, system-ui, sans-serif;
+        overflow-x: hidden;
     }
 }
 
@@ -19,6 +20,16 @@
 #app {
     min-height: 100vh;
     width: 100vw;
+}
+
+#logo {
+    background: white;
+    @media screen and (min-width: 1024px) {
+        position: relative;
+        top: 20px;
+        left: 50px;
+        @apply shadow-xl;
+    }
 }
 
 section {
@@ -74,11 +85,29 @@ a {
     @apply rounded-full text-white p-2 px-4 bg-main-green hover:bg-white hover:text-main-green hover:border hover:border-main-green;
 }
 
-.black-pill-button {
-    @apply rounded-full p-2 px-4 bg-white bg-gradient-to-b from-main-green to-main-blue border border-white border-2 text-white;
+.transparent-pill-button {
+    @apply rounded-full p-2 px-4 bg-transparent border border-white border-2 text-white;
 }
 
 th,
 td {
     @apply border border-solid text-light-grey border-main-green p-2;
+}
+
+.tag {
+    @apply uppercase text-sm hover:bg-main-green hover:text-white font-bold font-serif border border-lighter-grey hover:border-main-green;
+    padding: 10px 15px;
+    color: #000;
+    border-radius: 7px;
+    transition: color 0.25s ease-out;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 10px;
+    background: #a1bf43;
+}
+::-webkit-scrollbar-thumb {
+    background: white;
+    @apply border border-solid border-2 border-main-green;
 }
