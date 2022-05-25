@@ -9,11 +9,6 @@ export default defineConfig({
       // https://rollupjs.org/guide/en/#outputmanualchunks
       output: {
         manualChunks: {
-          'group-user': [
-            './src/pages/Galeria',
-            './src/pages/Proyectos',
-            './src/pages/Noticias',
-          ],
         },
       },
     }

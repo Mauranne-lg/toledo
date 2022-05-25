@@ -25,7 +25,6 @@ import Header from "../components/Header.vue";
 export default {
     name: "Galeria",
     components: Header,
-    mounted() {},
     data() {
         return {
             images: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -39,15 +38,6 @@ export default {
             ],
         };
     },
-    methods: {
-        importAll(r) {
-            r.keys().forEach((key) =>
-                this.images.push({ pathLong: r(key), pathShort: key })
-            );
-        },
-    },
+
 };
 </script>
-
-<style></style>
-,
