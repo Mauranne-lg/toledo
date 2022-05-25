@@ -48,7 +48,7 @@ import NavbarLink from "../components/NavbarLink.vue";
             class="h-full w-full block lg:flex lg:items-center lg:w-auto pl-3 lg:pl-0"
         >
             <div class="text-sm lg:flex-grow">
-                <NavbarLink v-for="navlink in navlinks" :route="navlink" />
+                <NavbarLink v-for="navlink in navlinks" :route="navlink.route" :title="navlink.title"/>
             </div>
             <div
                 class="h-full mt-4 w-24 lg:w-normal lg:mt-0 bg-main-green flex place-items-center"
@@ -71,7 +71,7 @@ export default {
     data() {
         return {
             isNavbarOpen: false,
-            navlinks: ['inicio', 'reserva', 'noticias', 'proyectos', 'galeria', 'contacto']
+            navlinks: [{route:'', title:'inicio'},{route:'reserva', title:'reserva'}, {route:'noticias', title:'noticias'}, {route:'proyectos', title:'proyectos'}, {route:'galeria', title:'galeria'}, {route:'contacto', title:'contacto'}]
         };
     },
 };

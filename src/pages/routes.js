@@ -11,14 +11,9 @@ import PageNotFound from './PageNotFound.vue';
 
 const routes = [
     {
-        path: '/',
+        path: '',
         component: Inicio,
         name:"inicio"
-    },
-    {
-        path: '/inicio',
-        component: Inicio,
-        name: "inicio"
     },
     {
         path: '/reserva',
