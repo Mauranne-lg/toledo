@@ -11,7 +11,9 @@ module.exports = {
       'main-green': '#a1bf43',
       'secondary-green': '#57a077',
       'whitesmoke': '#fbfbfb',
+      'lighter-grey':'#e7e7e7',
       'light-grey': '#707070',
+      'secondary-grey':'#F7F7F7',
       'white':'#ffffff',
       'black':'#000000',
       'main-blue':'#0084B5',
@@ -29,7 +31,7 @@ module.exports = {
         'mission-toledo':"url('/src/assets/mission-toledo2.jpg')",
         }),
       height: {
-        'jumbotron': '20rem',
+        'jumbotron': '24rem',
       }
     },
   },
