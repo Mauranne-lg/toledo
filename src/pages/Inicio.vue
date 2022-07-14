@@ -6,7 +6,7 @@ import Header from "../components/Header.vue";
     <section class="inicio">
         <Header title="Inicio" subtitle="Inicio" />
         <div class="container w-4/5 flex flex-col sm:flex-row m-auto">
-            <div class="m-10">
+            <div class="sm:m-10 my-6">
                 <h2>RESERVA EL TOLEDO</h2>
                 <p>
                     El Refugio Nacional de Vida Silvestre Hacienda Barú está
@@ -38,7 +38,7 @@ import Header from "../components/Header.vue";
                     momento.
                 </p>
             </div>
-            <div class="m-10 flex flex-col">
+            <div class="sm:m-10 my-6 flex flex-col">
                 <h2>¿CÓMO LLEGAR?</h2>
                 <p>
                     Hacienda Barú está ubicada sobre la carretera Costanera Sur
@@ -47,20 +47,15 @@ import Header from "../components/Header.vue";
                     Río Barú o de la intersección con carretera de Dominical a
                     San Isidro de Pérez Zeledón.
                 </p>
-                <iframe
-                    class="map"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28821.066689954994!2d-85.42081648578637!3d10.041636077738358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9fa51d42a61be3%3A0x2b5b93a7e157a6db!2sReserva%20El%20Toledo!5e0!3m2!1sfr!2scr!4v1652900832081!5m2!1sfr!2scr"
-                    style="border: 0"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
+                <iframe title="Toledo dirrecion" class="map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44447.020268610846!2d-85.43045959255913!3d10.049937121336944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9fa51d42a61be3%3A0x2b5b93a7e157a6db!2sReserva%20El%20Toledo!5e0!3m2!1sfr!2scr!4v1657835974340!5m2!1sfr!2scr"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
         <div class="w-screen">
             <div
-                class="h-fit sm:h-96 bg-mission-inicio bg-cover bg-center flex flex-col justify-center items-center gap-6 sm:gap-24 sm:flex-row"
-            >
+                class="h-fit sm:h-96 bg-mission-inicio bg-cover bg-center flex flex-col justify-center items-center gap-6 sm:gap-24 sm:flex-row">
                 <article class="h-100 w-80 p-6 sm:p-4">
                     <h2 class="text-white">Vision</h2>
                     <p class="text-white">
@@ -87,8 +82,7 @@ import Header from "../components/Header.vue";
             </div>
         </div>
         <div
-            class="container p-12 space-y-7 grid place-content-center place-items-center"
-        >
+            class="container p-12 space-y-7 grid place-content-center place-items-center">
             <h3 class="underlined-title text-light-grey">¿Estás interesado?</h3>
             <p class="text-4xl font-bold font-serif">Únase a nosotros</p>
             <p>
@@ -99,8 +93,7 @@ import Header from "../components/Header.vue";
         </div>
         <div class="w-screen">
             <div
-                class="h-fit sm:h-96 bg-history bg-cover bg-center flex flex-col justify-center items-center sm:items-center gap-6 p-6"
-            >
+                class="h-fit sm:h-96 bg-history bg-cover bg-center flex flex-col justify-center items-center sm:items-center gap-6 p-6">
                 <h2 class="text-white">Historia</h2>
                 <div class="flex flex-col sm:flex-row">
                     <p class="flex-1 text-white m-6">
@@ -141,6 +134,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .map {
     width: 300px;
     height: 350px;

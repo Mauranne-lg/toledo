@@ -12,6 +12,7 @@
     "sass": "^1.52.1",
     "sass-loader": "^13.0.0",
     "vue": "^3.2.25",
+    "vue-cli-plugin-compression": "^1.2.0",
     "vue-router": "^4.0.15"
   },
   "devDependencies": {

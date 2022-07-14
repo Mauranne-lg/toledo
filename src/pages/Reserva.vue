@@ -20,11 +20,9 @@ import Header from "../components/Header.vue";
         </div>
         <div class="w-screen">
             <div
-                class="h-fit p-6 sm:p-0 sm:h-96 bg-mission-toledo bg-cover bg-center flex flex-col justify-center items-center gap-6 sm:gap-24 sm:flex-row"
-            >
+                class="h-fit p-6 sm:p-0 sm:h-96 bg-mission-toledo bg-cover bg-center flex flex-col justify-center items-center gap-6 sm:gap-24 sm:flex-row">
                 <article
-                    class="h-72 sm:w-80 p-6 sm:p-4 bg-main-blue opacity-[.85] hover:opacity-100 transition ease-in-out"
-                >
+                    class="h-72 sm:w-80 p-6 sm:p-4 bg-main-blue opacity-[.85] hover:opacity-100 transition ease-in-out">
                     <h2 class="underlined-title text-white">Vision</h2>
                     <p class="text-white">
                         El RNVS se compromete con el manejo apropiado, cuidadoso
@@ -35,8 +33,7 @@ import Header from "../components/Header.vue";
                     </p>
                 </article>
                 <article
-                    class="h-72 sm:w-80 p-6 sm:p-4 bg-main-green opacity-[.85] hover:opacity-100 transition ease-in-out"
-                >
+                    class="h-72 sm:w-80 p-6 sm:p-4 bg-main-green opacity-[.85] hover:opacity-100 transition ease-in-out">
                     <h2 class="underlined-title text-white">Mission</h2>
                     <p class="text-white">
                         Promover el conocimiento y la investigación científica
@@ -48,57 +45,47 @@ import Header from "../components/Header.vue";
                 </article>
             </div>
         </div>
-        <div class="w-screen">
+        <div class="w-screen" id="reservar">
             <div
-                class="h-fit sm:px-24 py-16 bg-gradient-to-b from-main-green to-main-blue opacity-75 flex flex-col justify-center items-center"
-            >
-                <h3 id="reservar" class="text-5xl font-serif text-white mb-6">Reservar</h3>
-                <form>
+                class="h-fit sm:px-24 py-16 bg-gradient-to-b from-main-green to-main-blue opacity-75 flex flex-col justify-center items-center">
+                <h3 class="text-5xl font-serif text-white mb-6">Reservar</h3>
+                <form id="reserva-form" v-if="showForm"
+                    @submit.prevent="isLoading = true; submitForm()">
+                    <input type="hidden" name="contact_number">
                     <div class="flex flex-col sm:flex-row gap-3">
                         <label class="block">
-                            <span class="block text-sm font-medium text-white"
-                                >Nombre</span
-                            >
+                            <span
+                                class="block text-sm font-medium text-white">Nombre*</span>
                             <!-- Using form state modifers, the classes can be identical for every input -->
-                            <input
-                                type="text"
-                                value="tbone"
+                            <input type="text" name="user_name"
                                 class="mt-1 block w-full px-3 py-2 bg-white border rounded-full text-sm shadow-sm focus:outline-none focus:border-main-green border-white"
-                            />
+                                required />
                         </label>
                         <label class="block">
-                            <span class="block text-sm font-medium text-white"
-                                >Correo electronico</span
-                            >
+                            <span class="block text-sm font-medium text-white">Correo
+                                electronico*</span>
                             <!-- Using form state modifers, the classes can be identical for every input -->
-                            <input
-                                type="text"
-                                value="tbone"
+                            <input type="email" name="user_email"
                                 class="mt-1 block w-full px-3 py-2 bg-white border rounded-full text-sm shadow-sm focus:outline-none focus:border-main-green border-white"
-                            />
+                                required />
                         </label>
                     </div>
                     <label class="block mt-3">
-                        <span class="block text-sm font-medium text-white"
-                            >Commentarios</span
-                        >
+                        <span
+                            class="block text-sm font-medium text-white">Commentarios*</span>
                         <!-- Using form state modifers, the classes can be identical for every input -->
-                        <textarea
-                            name=""
-                            id=""
-                            cols="30"
-                            rows="10"
+                        <textarea cols="30" rows="10" name="message"
                             class="mt-1 block w-full px-3 py-2 bg-white border rounded-xl text-sm shadow-sm focus:outline-none focus:border-main-green border-white"
-                        ></textarea>
+                            required></textarea>
                     </label>
                     <div class="w-full flex justify-center mt-4">
-                        <button
-                            class="sm:w-1/3 w-full mx-auto transparent-pill-button"
-                        >
-                            Enviar sollicitud
-                        </button>
+                        <input class="sm:w-1/3 w-full mx-auto transparent-pill-button"
+                            type="submit"
+                            :value="[!isLoading ? 'Enviar sollicitud' : 'Procesando...']">
                     </div>
                 </form>
+                <p class="text-xl text-white px-12 text-center">
+                    {{ mailFeedback }}</p>
             </div>
         </div>
         <div class="w-screen flex flex-col sm:flex-row gap-6 p-12">
@@ -179,11 +166,8 @@ import Header from "../components/Header.vue";
                         * Las tarifas están válidas hasta el 31 de diciembre del
                         2020. Para más información o por descuentos para grupos
                         de más de 15 personas, contáctenos:
-                        <a
-                            href="mailto:info@reservaeltoledo.com"
-                            class="text-main-green"
-                            >info@reservaeltoledo.com</a
-                        >
+                        <a href="mailto:info@reservaeltoledo.com"
+                            class="text-main-green">info@reservaeltoledo.com</a>
                     </p>
                 </div>
                 <div>
@@ -218,11 +202,8 @@ import Header from "../components/Header.vue";
                     <p>
                         * Rates valid through 12/31/20. For more information and
                         for group rates (over 15 people) please contact us at:
-                        <a
-                            href="mailto:info@reservaeltoledo.com"
-                            class="text-main-green"
-                            >info@reservaeltoledo.com</a
-                        >
+                        <a href="mailto:info@reservaeltoledo.com"
+                            class="text-main-green">info@reservaeltoledo.com</a>
                     </p>
                 </div>
             </div>
@@ -238,13 +219,36 @@ export default {
         return {
             cards: [1, 2, 3, 4, 5, 6, 7, 8],
             hash: this.$route.hash,
+            showForm: true,
+            mailFeedback: '',
+            isLoading: false,
         };
     },
     mounted() {
+        emailjs.init('W8Gbgq2rz3THHJx70');
         var section=this.$router.currentRoute.value.hash.replace("#", "");
         if (section)
             this.$nextTick(()=> window.document.getElementById(section).scrollIntoView());
     },
+    methods: {
+        submitForm() {
+            const form = document.getElementById('reserva-form');
+            // generate a five digit number for the contact_number variable
+            form.contact_number.value = Math.random() * 100000 | 0;
+            // these IDs from the previous steps
+            emailjs.sendForm('service_vs5lrxl', 'contact_form', form)
+                .then(() => {
+                    this.showForm = false;
+                    this.mailFeedback = "Gracias por su mensaje ! 😃 Le respondemos rápidamente.";
+                    console.log('SUCCESS!');
+                })
+                .catch((error) => {
+                    this.mailFeedback = "Lo sentimos, hubo un problema 😞 ¡Inténtalo de nuevo!";
+                    console.log('FAILED...', error);
+                });
+            this.isLoading = false;
+        }
+    }
 };
 </script>
 

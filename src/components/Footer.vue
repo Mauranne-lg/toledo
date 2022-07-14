@@ -99,4 +99,9 @@
 export default {};
 </script>
 
-<style></style>
+<style>
+.grid img{
+    height: 150px;
+    width: 150px;
+}
+</style>

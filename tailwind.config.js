@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     colors:{
       transparent: 'transparent',
-      'main-green': '#a1bf43',
+      'main-green': '#90AB3C',
       'secondary-green': '#57a077',
       'whitesmoke': '#fbfbfb',
       'lighter-grey':'#e7e7e7',
@@ -16,7 +16,7 @@ module.exports = {
       'secondary-grey':'#F7F7F7',
       'white':'#ffffff',
       'black':'#000000',
-      'main-blue':'#0084B5',
+      'main-blue':'#006A91',
     },
     fontFamily: {
       serif: ['PTSerif', 'serif'],
