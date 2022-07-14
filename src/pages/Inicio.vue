@@ -47,20 +47,15 @@ import Header from "../components/Header.vue";
                     Río Barú o de la intersección con carretera de Dominical a
                     San Isidro de Pérez Zeledón.
                 </p>
-                <iframe
-                    class="map"
+                <iframe class="map"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28821.066689954994!2d-85.42081648578637!3d10.041636077738358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9fa51d42a61be3%3A0x2b5b93a7e157a6db!2sReserva%20El%20Toledo!5e0!3m2!1sfr!2scr!4v1652900832081!5m2!1sfr!2scr"
-                    style="border: 0"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
+                    style="border: 0" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
         <div class="w-screen">
             <div
-                class="h-fit sm:h-96 bg-mission-inicio bg-cover bg-center flex flex-col justify-center items-center gap-6 sm:gap-24 sm:flex-row"
-            >
+                class="h-fit sm:h-96 bg-mission-inicio bg-cover bg-center flex flex-col justify-center items-center gap-6 sm:gap-24 sm:flex-row">
                 <article class="h-100 w-80 p-6 sm:p-4">
                     <h2 class="text-white">Vision</h2>
                     <p class="text-white">
@@ -87,8 +82,7 @@ import Header from "../components/Header.vue";
             </div>
         </div>
         <div
-            class="container p-12 space-y-7 grid place-content-center place-items-center"
-        >
+            class="container p-12 space-y-7 grid place-content-center place-items-center">
             <h3 class="underlined-title text-light-grey">¿Estás interesado?</h3>
             <p class="text-4xl font-bold font-serif">Únase a nosotros</p>
             <p>
@@ -99,8 +93,7 @@ import Header from "../components/Header.vue";
         </div>
         <div class="w-screen">
             <div
-                class="h-fit sm:h-96 bg-history bg-cover bg-center flex flex-col justify-center items-center sm:items-center gap-6 p-6"
-            >
+                class="h-fit sm:h-96 bg-history bg-cover bg-center flex flex-col justify-center items-center sm:items-center gap-6 p-6">
                 <h2 class="text-white">Historia</h2>
                 <div class="flex flex-col sm:flex-row">
                     <p class="flex-1 text-white m-6">
