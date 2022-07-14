@@ -24,9 +24,8 @@ import Header from "../components/Header.vue";
             class="text-light-grey group-hover:text-white">info@reservaeltoledo.com</a>
         </div>
       </div>
-      <iframe class="flex-1 map shadow"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28821.066689954994!2d-85.42081648578637!3d10.041636077738358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9fa51d42a61be3%3A0x2b5b93a7e157a6db!2sReserva%20El%20Toledo!5e0!3m2!1sfr!2scr!4v1652900832081!5m2!1sfr!2scr"
-        style="border: 0" allowfullscreen="" loading="lazy"
+      <iframe title="Toledo dirrecion" class="flex-1 map shadow"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44447.020268610846!2d-85.43045959255913!3d10.049937121336944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9fa51d42a61be3%3A0x2b5b93a7e157a6db!2sReserva%20El%20Toledo!5e0!3m2!1sfr!2scr!4v1657835974340!5m2!1sfr!2scr" style="border:0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="w-screen">

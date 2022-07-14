@@ -24,6 +24,8 @@
 
 #logo {
     background: white;
+    height: 100px;
+    width: 100px;
     @media screen and (min-width: 1024px) {
         position: relative;
         top: 20px;
@@ -31,7 +33,9 @@
         @apply shadow-xl;
     }
 }
-
+#navbar{
+    margin-bottom:1.2rem;
+}
 section {
     min-height: 80vh;
 }

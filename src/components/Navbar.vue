@@ -5,13 +5,13 @@ import NavbarLink from "../components/NavbarLink.vue";
 <template>
     <div class="bg-main-blue w-screen">
         <ul class="flex items-center text-white text-sm h-12 lg:ml-6">
-            <li class="px-3">
+            <li class="px-2">
                 <i class="fa-solid mr-2 fa-phone --fa-white"></i>
                 <a href="tel:+506 8347-5194" class="text-white"
                     >+506 8347-5194</a
                 >
             </li>
-            <li class="px-3">
+            <li class="px-2">
                 <i class="fa-solid mr-2 fa-envelope --fa-white"></i>
                 <a href="mailto:info@reservaeltoledo.com" class="text-white"
                     >info@reservaeltoledo.com</a
