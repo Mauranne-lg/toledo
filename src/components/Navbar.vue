@@ -26,7 +26,7 @@
       class="h-full w-full block sm:flex sm:items-center sm:w-auto">
       <div class="text-sm sm:flex-grow sm:py-6">
         <a
-          href="#"
+          href="/"
           class="block mt-4 sm:inline-block sm:mt-0 text-light-grey hover:text-main-green active:text-main-green mr-4"
         >
           Inicio
@@ -56,7 +56,7 @@
           Especies
         </a>
         <a
-          href="#"
+          href="/galeria"
           class="block mt-4 sm:inline-block sm:mt-0 text-light-grey hover:text-main-green active:text-main-green mr-4"
         >
           Galeria
@@ -76,7 +76,6 @@
         >
       </div>
     </div>
-
   </nav>
 </template>
 

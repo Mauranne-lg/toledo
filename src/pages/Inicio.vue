@@ -1,11 +1,6 @@
 <template>
   <section class="inicio">
-    <div class="w-screen">
-      <div class="h-jumbotron bg-toledo bg-cover bg-center grid place-content-center">
-        <h1 class="shadow-xl">Inicio</h1>
-        <span class="subtitle">Toledo - Inicio</span>
-      </div>
-    </div>
+    <Jumbotron title="Inicio" subtitle="Empezar con nosotros" />
     <div class="container w-screen flex flex-col sm:flex-row m-auto">
       <div class="m-10">
         <h2>RESERVA EL TOLEDO</h2>
@@ -76,7 +71,7 @@
         </article>
       </div>
     </div>
-    <div class="container p-12 space-y-7 grid place-content-center place-items-center">
+    <div class="p-12 space-y-7 grid place-content-center place-items-center">
         <h3 class="underlined-title">¿Estás interesado?</h3>
         <p class="text-4xl font-bold font-serif">Únase a nosotros</p>
         <p>Para más información sobre el refugio y la estación de investigación biológica, contáctenos.</p>
@@ -106,8 +101,13 @@ En el año 2017 se terminó de construir el Centro Biológico que promueve la in
 </template>
 
 <script>
+import Jumbotron from "../components/Jumbotron.vue";
+
 export default {
   name: "Inicio",
+  components: {
+    Jumbotron
+  },
 };
 </script>
 
@@ -127,34 +127,4 @@ h3 {
     left: 55px;
 }
 }
-/*
-.jumbotron:before {
-    content: "";
-    position: fixed;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    display: block;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: center;
-    background-image: url("../assets/toledo-bird.jpg");
-    height: 60vh;
-    -moz-filter   : brightness(60%);
-    -webkit-filter: brightness(60%);
-    -o-filter     : brightness(60%);
-    -ms-filter:  brightness(60%);
-    filter: brightness(60%);
-}
-
-.jumbotron {
-    display: block;
-    height: 60vh;
-    justify-content: center;
-    align-items:center;
-    position: fixed;
-    left: 0;
-    right: 0;
-    z-index: 0;
-} */
 </style>

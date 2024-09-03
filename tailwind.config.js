@@ -21,12 +21,12 @@ module.exports = {
     },
     extend: {
       backgroundImage: theme => ({
-        'toledo': "url('/src/assets/toledo-bird.jpg')",
+        'toledo': "url('/src/assets/nature.webp')",
         'mission': "url('/src/assets/sprout.jpg')",
         'history': "url('/src/assets/history.jpg')",
         }),
       height: {
-        'jumbotron': '20rem',
+        'jumbotron': '25rem',
       }
     },
   },
