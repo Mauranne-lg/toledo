@@ -1,13 +1,12 @@
 <template>
-    <div class="bg-main-blue w-screen">
+    <div class="bg-main-blue">
     <ul class="flex items-center text-white text-sm h-12">
-      <li class="px-3"><i class="fa-solid mr-2 fa-phone --fa-white"></i>+506-2787-0010</li>
-      <li class="px-3"><i class="fa-solid mr-2 fa-envelope --fa-white"></i>info@haciendabaru.org</li>
+      <li class="px-3"><i class="fa-solid mr-2 fa-phone --fa-white"></i>+506-2787-5510</li>
+      <li class="px-3"><i class="fa-solid mr-2 fa-envelope --fa-white"></i>info-toledo@hacienda.org</li>
     </ul>
   </div>
-  <nav class="w-screen min-h-2 sm:h-28 flex items-center justify-between bg-white flex-wrap sm:px-6 p-2 sm:py-0" role="navigation" aria-label="main navigation">
+  <nav class="min-h-2 sm:h-28 flex items-center justify-center bg-white flex-wrap sm:px-6 p-2 sm:py-0" role="navigation" aria-label="main navigation">
     <div class="w-full flex justify-between items-center sm:w-auto text-main-green">
-      <img class="w-24" src="../assets/logo.jpg" alt="">
       <div
         class="space-y-1 border h-8 border-main-green rounded p-2 m-2 sm:hidden"
         role="button"
@@ -24,55 +23,16 @@
 
     <div id="navbar" :class="isNavbarOpen ? '' : 'hidden'"
       class="h-full w-full block sm:flex sm:items-center sm:w-auto">
-      <div class="text-sm sm:flex-grow sm:py-6">
-        <a
-          href="/"
-          class="block mt-4 sm:inline-block sm:mt-0 text-light-grey hover:text-main-green active:text-main-green mr-4"
-        >
-          Inicio
-        </a>
-        <a
-          href="#"
-          class="block mt-4 sm:inline-block sm:mt-0 text-light-grey hover:text-main-green active:text-main-green mr-4"
-        >
-          Reserva El Toledo
-        </a>
-        <a
-          href="#"
-          class="block mt-4 sm:inline-block sm:mt-0 text-light-grey hover:text-main-green active:text-main-green mr-4"
-        >
-          Noticias
-        </a>
-                <a
-          href="#"
-          class="block mt-4 sm:inline-block sm:mt-0 text-light-grey hover:text-main-green active:text-main-green mr-4"
-        >
-          Proyectos
-        </a>
-        <a
-          href="#"
-          class="block mt-4 sm:inline-block sm:mt-0 text-light-grey hover:text-main-green active:text-main-green mr-4"
-        >
-          Especies
-        </a>
-        <a
-          href="/galeria"
-          class="block mt-4 sm:inline-block sm:mt-0 text-light-grey hover:text-main-green active:text-main-green mr-4"
-        >
-          Galeria
-        </a>
-        <a
-          href="#"
-          class="block mt-4 sm:inline-block sm:mt-0 text-light-grey hover:text-main-green active:text-main-green mr-4"
-        >
-          Contacto
-        </a>
+      <div class="sm:flex-grow sm:py-6">
+        <Navlink title="Inicio" link="/" />
+        <Navlink title="Proyectos" link="/proyectos" />
+        <Navlink title="Galeria" link="/galeria" />
       </div>
-      <div class="h-full mt-4 w-24 sm:w-normal sm:mt-0 bg-main-green flex place-items-center">
+      <div class="h-full w-28 sm:w-normal sm:mt-0 bg-main-green text-xl place-content-center">
         <a
           href="#"
-          class="text-sm px-4 sm:h-20 flex place-items-center py-2 text-white"
-          >Reservar</a
+          class="sm:h-20 ml-4 text-white text-center"
+          >Contacto</a
         >
       </div>
     </div>
@@ -80,16 +40,17 @@
 </template>
 
 <script>
+import Navlink from "../components/Navlink.vue"
+
 export default {
   name: "Navbar",
+  components: {
+    Navlink
+  },
   data() {
     return {
       isNavbarOpen: false,
     };
-  },
+  }
 };
 </script>
-
-<style>
-
-</style>

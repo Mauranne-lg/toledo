@@ -1,7 +1,7 @@
 <template>
   <section class="inicio">
     <Jumbotron title="Galeria" subtitle="Disfrutar de la naturaleza" />
-    <div class="container w-screen flex flex-col sm:flex-row m-auto">
+    <div class="container flex flex-col sm:flex-row m-auto">
       <div class="m-10">
         <h2>GALERIA</h2>
       </div>

@@ -1,7 +1,7 @@
 <template>
   <section class="inicio">
     <Jumbotron title="Inicio" subtitle="Empezar con nosotros" />
-    <div class="container w-screen flex flex-col sm:flex-row m-auto">
+    <div class="container  flex flex-col sm:flex-row m-auto">
       <div class="m-10">
         <h2>RESERVA EL TOLEDO</h2>
         <p>
@@ -46,7 +46,7 @@
         ></iframe>
       </div>
     </div>
-    <div class="w-screen">
+    <div class="">
       <div
         class="h-fit sm:h-96 bg-mission bg-cover bg-center flex flex-col justify-center items-center gap-6 sm:gap-24 sm:flex-row"
       >
@@ -77,7 +77,7 @@
         <p>Para más información sobre el refugio y la estación de investigación biológica, contáctenos.</p>
         <button class="rounded-full text-white p-2 px-4 bg-main-green hover:bg-white hover:text-main-green hover:border hover:border-main-green">Contactenos</button>
     </div>
-    <div class="w-screen">
+    <div class="">
       <div
         class="h-fit sm:h-96 bg-history bg-cover bg-center flex flex-col justify-center items-center sm:items-center gap-6 p-6"
       >

@@ -1,5 +1,5 @@
 <template>
-  <footer class="w-screen drop-shadow-2xl">
+  <footer class="drop-shadow-2xl">
     <div class="bg-whitesmoke flex flex-col gap-6 justify-around sm:flex-row p-6 sm:p-20">
       <div class="flex flex-col flex-1 sm:pr-6">
       <img class="w-24 py-3" src="../assets/logo-no-bg.png" alt="">
@@ -21,16 +21,9 @@
         </div>
       </div>
     </div>
-    <div class="bg-secondary-green text-white justify-around flex items-center flex-col sm:flex-row">
-      <div class="text-center m-2 italic">2022 - Reserva El Toledo - Todos los derechos reservados</div>
-      <div>
-        <ul class="flex space-x-3 cursor-pointer">
-          <li class="hover:text-main-green">Reserva El Toledo</li>
-          <li class="hover:text-main-green">Proyectos</li>
-          <li class="hover:text-main-green">Galéria</li>
-          <li class="hover:text-main-green">Contacto</li>
-        </ul>
-      </div>
+    <div class="bg-secondary-green text-white p-4">
+      <div class="text-center italic">2022 - Reserva El Toledo - Todos los derechos reservados</div>
+
     </div>
   </footer>
 </template>
